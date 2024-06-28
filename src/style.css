@@ -1,0 +1,74 @@
+header nav{
+    background-color: #654687;
+}
+#navbarNav .navbar-nav .nav-item a{
+    color:rgba(255, 255, 255, 0.473);
+    font-size: 1.3em;
+}
+.nav-item.active .nav-link,
+#navbarNav .navbar-nav .nav-item a:hover{
+    color: white !important;
+    font-size: 1.4em;
+}
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.table-bordered-top {
+    border-top: 1px solid rgb(206, 205, 205);
+}
+
+.tr-bordered-top {
+    border-top: 1px solid rgb(206, 205, 205);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.container-fluid {
+    min-height: 100vh; 
+}
+.custom-bg-left {
+    background-color: #654687; 
+    color: white; 
+}
+
+.custom-bg-right {
+    background-color: white; 
+}
+form label{
+    color: rgb(184, 183, 183);
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0;
+}
+.container-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin-top: -200px; 
+}
+.password-reset-link {
+    color:  #654687 ;
+    text-decoration: none; 
+    font-weight: 500; 
+}
+
+.password-reset-link:hover, .password-reset-link:focus {
+    text-decoration: underline; 
+    color:  #654687;
+    font-weight: bolder;
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+    .mt-sm-down-3 {
+        margin-top: 2rem;
+    }
+}

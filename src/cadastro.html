@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <!-- Inclua o CSS do Bootstrap aqui -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">   
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>     
+
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo-orcamento -navbar.png" width="100" height="70" class="d-inline-block align-top" alt="Logo">
+                
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Cadastro <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consulta.html">Consulta</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container" style="max-width: 70%;">
+            <div class="row mb-3 mt-5">
+                <div class="input-group col-sm-12 col-md-4">
+                    <input type="date" class="form-control" id="dataDespesa" name="dataNascimento">
+                </div>
+                <div class="form-group col-md-8 mt-sm-down-3">
+                    <select class="custom-select form-control" required>
+                        <option value="">Tipo</option>
+                        <option value="1">Alimentação</option>
+                        <option value="2">Educação</option>
+                        <option value="3">Lazer</option>
+                        <option value="3">Saúde</option>
+                        <option value="3">Beleza</option>
+                        <option value="3">Transporte</option>
+                        <option value="3">Outros gastos</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="input-group col-md-6">
+                    <input type="text" class="form-control" id="descricao" placeholder="Descrição" required>
+                </div>
+                <div class="input-group col-md-4 mt-sm-down-3">
+                    <input type="text" class="form-control" id="valor" placeholder="R$ " required>
+                </div>                
+                <div class="col-md-2 d-flex justify-content-end mt-sm-down-3">
+                    <button type="button" class="btn btn-primary" style="background-color: #654687; color: white;">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+
+    </footer>
+    
+
+<!-- Scripts Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

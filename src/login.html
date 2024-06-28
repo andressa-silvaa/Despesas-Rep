@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Login</title>
+</head>
+<body>
+<div class="container-fluid h-100">
+    <div class="row h-100">
+        <div class="col-6 d-none d-md-flex flex-column justify-content-between custom-bg-left">
+            <div class="mt-5 text-center">
+            <!-- Exibido apenas em sm e tamanhos menores -->
+            <h1 class="display-4 d-block d-md-none">Bem vindo(a)!</h1>
+            <!-- Exibido apenas em md -->
+            <h1 class="display-3 d-none d-md-block d-lg-none">Bem vindo(a)!</h1>
+            <!-- Exibido em lg e tamanhos maiores -->
+            <h1 class="display-1 d-none d-lg-block">Bem vindo(a)!</h1>
+
+            </div>
+            <div class="text-center mt-3">
+                <img src="../img/foto-login.png" alt="foto-decorativa" class="img-fluid">
+            </div>
+        </div>
+        <div class="col-12 col-md-6 custom-bg-right">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <img src="../img/logo-orcamento.png" alt="logo" class="img-fluid mt-5">
+                </div>
+            </div>
+            <div class="container-centralizado">
+                <div class="container ">
+                    <div class="row justify-content-center mt-5 mb-5">
+                        <ul class="nav mt-5 justify-content-center" style="width: 60%;">
+                            <li class="nav-item" style="width: 30%;">
+                                <a class="nav-link active text-white text-center p-1" href="#" style="background-color: #654687; font-size: 1.2em;">LOGIN</a>
+                            </li>
+                            <li class="nav-item text-center" style="width: 50%;">
+                                <a class="nav-link text-dark text-center p-1" href="registro.html" style="font-size: 1.2em;">REGISTRO</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <form action="" method="post">
+                                <div class="form-group position-relative">
+                                    <label for="emailInput">E-MAIL :</label>
+                                    <input type="email" class="form-control input-gray" id="emailInput" name="email" placeholder=" " required>
+                                </div>
+                                <div class="form-group position-relative">
+                                    <label for="passwordInput">SENHA :</label>
+                                    <input type="password" class="form-control input-gray" id="passwordInput" name="password" placeholder=" " required>
+                                    <i id="togglePassword" class="fas fa-eye position-absolute" style="right: 10px; top: 70%; cursor: pointer; transform: translate(0, -50%);"></i>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">Lembre-se de mim</label>
+                                </div>
+                                <div class="form-check mb-3 text-left" style="margin-left: -20px">
+                                    <a href="#" class="password-reset-link">Esqueci minha senha</a>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="submit" class="btn p-2" style="background-color: #654687; color: white;width: 40%;">Entrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        
+    </div>
+</div>
+
+<!-- Scripts Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.9/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    document.getElementById('togglePassword').addEventListener('click', function (e) {
+        const passwordInput = document.getElementById('passwordInput');
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+        } else {
+            passwordInput.type = 'password';
+        }
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        var form = document.querySelector('form');
+        form.noValidate = true; // Desativa a validação HTML5 nativa
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            var isValid = form.checkValidity();
+            Array.from(form.elements).forEach(function(input) {
+                if (input.tagName === 'INPUT' || input.tagName === 'TEXTAREA') {
+                    var isInputValid = input.checkValidity();
+                    if (isInputValid) {
+                        input.classList.add('is-valid');
+                        input.classList.remove('is-invalid');
+                    } else {
+                        input.classList.add('is-invalid');
+                        input.classList.remove('is-valid');
+                    }
+                }
+            });
+    
+            if (isValid) {
+                console.log('Formulário válido, enviando...');
+            } else {
+                console.log('Formulário inválido, corrija os erros.');
+            }
+        });
+    
+        Array.from(form.elements).forEach(function(input) {
+            input.addEventListener('input', function() {
+                if (input.checkValidity()) {
+                    input.classList.remove('is-invalid');
+                    input.classList.add('is-valid');
+                } else {
+                    input.classList.remove('is-valid');
+                    input.classList.add('is-invalid');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
